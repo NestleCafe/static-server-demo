@@ -24,7 +24,7 @@ var server = http.createServer(function(request, response){
 
     response.statusCode = 200
     
-    //默认首页
+    //默认首页 path为空则默认打开index.html
     const filePath = path === '/' ? '/index.html' : path
     const index = filePath.lastIndexOf('.')
     const suffix = filePath.substring(index)
